@@ -1,0 +1,62 @@
+[
+  {
+    "source": "CSS Tricks",
+    "author": "Sarah Drasner",
+    "title": "Understanding Async Await",
+    "link": "https://css-tricks.com/understanding-async-await/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Chris Coyier",
+    "title": "let vs. const",
+    "link": "https://overreacted.io/on-let-vs-const/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Chris Coyier",
+    "title": "Required Parameters for Functions in JavaScript",
+    "link": "https://css-tricks.com/snippets/javascript/required-parameters-for-functions-in-javascript/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Mateusz Rybczonek",
+    "title": "One Way to Break Users Out of the Habit of Reloading Too Much",
+    "link": "https://css-tricks.com/one-way-to-break-users-out-of-the-habit-of-reloading-too-much/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Bailey Jones",
+    "title": "What is super() in JavaScript?",
+    "link": "https://css-tricks.com/what-is-super-in-javascript/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Elliot Goldman",
+    "title": "Comparing the Different Types of Native JavaScript Popups",
+    "link": "https://css-tricks.com/comparing-the-different-types-of-native-javascript-popups/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Chris Coyier",
+    "title": "“Off The Main Thread”",
+    "link": "https://css-tricks.com/off-the-main-thread/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "David Khourshid",
+    "title": "Model-Based Testing in React with State Machines",
+    "link": "https://css-tricks.com/model-based-testing-in-react-with-state-machines/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Chris Coyier",
+    "title": "Working with Attributes on DOM Elements",
+    "link": "https://css-tricks.com/working-with-attributes-on-dom-elements/"
+  },
+  {
+    "source": "CSS Tricks",
+    "author": "Zell Liew",
+    "title": "Everything You Need to Know About Date in JavaScript",
+    "link": "https://css-tricks.com/everything-you-need-to-know-about-date-in-javascript/"
+  }
+]
