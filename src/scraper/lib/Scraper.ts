@@ -1,7 +1,7 @@
 import * as path from 'path';
 import { launch } from 'puppeteer';
 import { promises as fs } from 'fs';
-import { ScrapeSource, Post } from '../types';
+import { ScrapeSource, Post, Source } from '../types';
 
 class Scraper {
   constructor(
@@ -10,7 +10,7 @@ class Scraper {
   ) {}
 
   /**
-   * Scrape a source with pupepteer.
+   * Scrape a source with puppeteer.
    *
    * @param source The source to scrape.
    */
@@ -25,7 +25,7 @@ class Scraper {
     // Scrape page using provided function.
     const posts = await page.evaluate(source.getPosts);
 
-    this.saveResults(source.filename, posts);
+    this.saveResults(source, posts);
 
     await browser.close();
   }
@@ -36,10 +36,16 @@ class Scraper {
    * @param filename Name of file to save>
    * @param posts Array of Post objects.
    */
-  private async saveResults(filename, posts: Post[]) {
+  private async saveResults(source: ScrapeSource, posts: Post[]) {
+    const results: Source = {
+      name: source.name,
+      url: source.url,
+      posts: posts,
+    };
+
     await fs.writeFile(
-      path.join(this.saveDir, filename),
-      JSON.stringify(posts)
+      path.join(this.saveDir, source.filename),
+      JSON.stringify(results)
     );
   }
 

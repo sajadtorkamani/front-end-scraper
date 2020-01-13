@@ -6,6 +6,12 @@ export type ScrapeSource = {
   getPosts(): Post[];
 };
 
+export type Source = {
+  name: string;
+  url: string;
+  posts: Post[];
+};
+
 export interface Post {
   author: string;
   title: string;
