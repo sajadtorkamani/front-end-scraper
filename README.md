@@ -7,7 +7,3 @@ Currently, it scrapes the following sites:
 - [CSS Tricks](https://css-tricks.com/tag/javascript/)
 - [Dan Abramov's blog](https://overreacted.io/)
 - [Kent C. Dodds' blog](https://kentcdodds.com/blog)
-
-TODO:
-
-- Add more sites
