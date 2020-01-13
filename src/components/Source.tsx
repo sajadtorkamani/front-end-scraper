@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion } from 'react-bootstrap';
+import styled from 'styled-components';
 import { Source as ISource } from '../scraper/types';
-import styles from './Source.module.scss';
 
 type Props = {
   source: ISource;
@@ -9,8 +9,8 @@ type Props = {
 };
 
 const Source: React.FC<Props> = ({ source, index }) => (
-  <section className={styles.wrapper}>
-    <Accordion.Toggle as="h2" eventKey={index} className={styles.header}>
+  <StyledSource>
+    <Accordion.Toggle as="h2" eventKey={index} className="source-name">
       {source.name}
       <a href={source.url} target="_blank">
         <small className="text-muted ml-3">(Visit source)</small>
@@ -18,9 +18,9 @@ const Source: React.FC<Props> = ({ source, index }) => (
     </Accordion.Toggle>
 
     <Accordion.Collapse eventKey={index}>
-      <div className={styles.body}>
+      <div className="post-list">
         {source.posts.map(post => (
-          <article>
+          <article className="post">
             <a href={post.link} target="_blank">
               <h3 className="post__title">{post.title}</h3>
               <small className="text-muted">Author: {post.author}</small>
@@ -29,7 +29,39 @@ const Source: React.FC<Props> = ({ source, index }) => (
         ))}
       </div>
     </Accordion.Collapse>
-  </section>
+  </StyledSource>
 );
+
+const StyledSource = styled.section`
+  background: #eee;
+  margin-bottom: 30px;
+
+  .source-name {
+    align-items: center;
+    display: flex;
+    padding: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    small {
+      vertical-align: middle;
+    }
+  }
+
+  .post {
+    margin-bottom: 12px;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .post-list {
+    padding: 0 20px 20px;
+  }
+`;
 
 export default Source;
