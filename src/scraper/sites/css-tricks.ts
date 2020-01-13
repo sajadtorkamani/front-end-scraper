@@ -1,4 +1,4 @@
-import scrape from './utils/scrape';
+import scrape from '../utils/scrape';
 
 const getPosts = () => {
   return $('.article-article')
