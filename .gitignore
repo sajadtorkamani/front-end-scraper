@@ -70,4 +70,4 @@ yarn-error.log
 
 
 # Scrape results
-src/content/scrape-results
+src/content/scrape-results/*.json
