@@ -4,6 +4,6 @@ import Scraper from './lib/Scraper';
 (async () => {
   new Scraper(
     path.join(__dirname, 'sources'),
-    path.join(__dirname, '..', 'content')
+    path.join(__dirname, '..', 'content', 'scrape-results')
   ).run();
 })();
